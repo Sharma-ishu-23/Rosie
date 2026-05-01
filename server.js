@@ -1,8 +1,10 @@
 require('dotenv').config();
 const express = require('express');
 const jwt = require('jsonwebtoken');
+const cors = require('cors');
 
 const app = express();
+app.use(cors());
 const port = 3000;
 
 // This is an example of how your server might look to generate the Chatbase token.

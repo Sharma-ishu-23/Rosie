@@ -489,3 +489,12 @@ section {
     .sidebar { width: 100%; right: -100%; }
     .grid { grid-template-columns: 1fr; }
 }
+
+/* Chatbase Widget Left Alignment Override */
+#chatbase-bubble-button,
+#chatbase-bubble-window,
+#chatbase-message-bubble,
+iframe[id^="chatbase"] {
+    left: 20px !important;
+    right: auto !important;
+}

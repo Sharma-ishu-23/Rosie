@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosie - Anti-Gravity Skincare</title>
+    <meta name="description" content="Discover skincare designed to elevate, restore, and transform your skin with precision. Lift Your Skin Beyond Time.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="#" class="logo" data-link="home">ROSIE <span>.</span></a>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar" id="sidebar">
+        <div class="close-btn" id="closeSidebar">&times;</div>
+        <a href="#" data-link="home">Home</a>
+        <a href="#" data-link="home">Explore</a>
+        <a href="#" data-link="quiz">Skin Quiz</a>
+        <a href="#">My Orders</a>
+        <a href="#">Wishlist</a>
+        <a href="#" style="color: var(--accent-neon);">Sale</a>
+        <a href="#">Profile / Account</a>
+    </nav>
+
+    <!-- Main Application Container -->
+    <main id="app">
+        <!-- HOME VIEW -->
+        <div class="view active" id="homeView">
+            <section class="hero">
+                <div class="particles" id="particles"></div>
+                <h1>Rosie Anti-Gravity Skincare</h1>
+                <h2>Lift Your Skin Beyond Time</h2>
+                <p>Discover skincare designed to elevate, restore, and transform your skin with precision.</p>
+                <button class="btn-primary" id="startQuizBtn">Start Your Skin Quiz</button>
+            </section>
+
+            <section class="about">
+                <h2 class="section-title">About <span>Rosie</span></h2>
+                <p>Rosie is a modern skincare brand focused on intelligent, personalized routines.</p>
+                <p>We combine simplicity with performance to help your skin look healthier, brighter, and naturally lifted.</p>
+            </section>
+
+            <section class="featured">
+                <h2 class="section-title">Featured <span>Products</span></h2>
+                <p style="text-align: center; color: var(--text-secondary); margin-bottom: 40px;">Explore our anti-gravity skincare essentials designed for real results. Each product is formulated to work individually and as part of a complete routine.</p>
+                <div class="grid" id="featuredGrid">
+                    <!-- Products dynamically loaded here via JS -->
+                </div>
+            </section>
+
+            <section class="quiz-promo" style="text-align: center; padding: 100px 20px;">
+                <h2 class="section-title">Not sure what your skin needs?</h2>
+                <p style="margin-bottom: 30px; color: var(--text-secondary);">Take our quick skin analysis quiz and get a personalized routine in seconds.</p>
+                <button class="btn-primary" id="startQuizBtn2">Start Quiz</button>
+            </section>
+
+            <section class="sale">
+                <h2 class="section-title">Limited Time <span>Offers</span></h2>
+                <p style="margin-bottom: 30px;">Upgrade your skincare routine with exclusive discounts on Rosie essentials.</p>
+                <button class="btn-primary">Shop Sale</button>
+            </section>
+
+            <section class="reviews">
+                <h2 class="section-title">Real Results from <span>Real Users</span></h2>
+                <div class="grid">
+                    <div class="review-card">
+                        <p>"My skin feels smoother and more radiant after just a few days."</p>
+                        <span style="color: var(--accent-neon);">- Sarah T.</span>
+                    </div>
+                    <div class="review-card">
+                        <p>"The routine was simple but actually worked for me."</p>
+                        <span style="color: var(--accent-neon);">- Jessica M.</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- QUIZ VIEW -->
+        <div class="view" id="quizView">
+            <div class="quiz-container">
+                <div class="quiz-progress">
+                    <div class="quiz-progress-bar" id="quizProgress"></div>
+                </div>
+                <div id="quizContainer" style="transition: opacity 0.3s ease;">
+                    <!-- Quiz dynamically loaded here via JS -->
+                </div>
+            </div>
+        </div>
+
+        <!-- RESULTS VIEW -->
+        <div class="view" id="resultsView">
+            <section>
+                <div class="results-header">
+                    <h2>Your Personalized <span>Rosie Routine</span></h2>
+                    <p>Based on your answers, here's what your skin needs:</p>
+                </div>
+                <div class="routine-grid" id="routineGrid">
+                    <!-- Routine dynamically loaded here via JS -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Load Data and App logic -->
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -172,4 +172,30 @@ document.addEventListener('DOMContentLoaded', () => {
             grid.appendChild(wrapper);
         });
     }
+
+    // --- CHATBASE CLIENT IDENTIFICATION ---
+    // Make sure to implement getUserToken() to fetch the JWT from your backend server
+    async function getUserToken() {
+        // TODO: Replace with your actual backend fetch logic
+        // const response = await fetch('/api/chatbase-token');
+        // const data = await response.json();
+        // return data.token;
+        return "MOCK_TOKEN"; 
+    }
+
+    async function identifyChatbaseUser() {
+        try {
+            const token = await getUserToken();
+            if (window.chatbase) {
+                window.chatbase('identify', { token });
+            } else {
+                console.warn("Chatbase script not loaded yet.");
+            }
+        } catch (error) {
+            console.error("Error identifying Chatbase user:", error);
+        }
+    }
+
+    // Uncomment this when you want to identify the user (e.g., after login)
+    // identifyChatbaseUser();
 });

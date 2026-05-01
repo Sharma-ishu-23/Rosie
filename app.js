@@ -176,11 +176,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- CHATBASE CLIENT IDENTIFICATION ---
     // Make sure to implement getUserToken() to fetch the JWT from your backend server
     async function getUserToken() {
-        // TODO: Replace with your actual backend fetch logic
-        // const response = await fetch('/api/chatbase-token');
-        // const data = await response.json();
-        // return data.token;
-        return "MOCK_TOKEN"; 
+        const response = await fetch('http://localhost:3000/api/chatbase-token');
+        const data = await response.json();
+        return data.token;
     }
 
     async function identifyChatbaseUser() {
@@ -196,6 +194,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Uncomment this when you want to identify the user (e.g., after login)
-    // identifyChatbaseUser();
+    // Call this to identify the user
+    identifyChatbaseUser();
 });
